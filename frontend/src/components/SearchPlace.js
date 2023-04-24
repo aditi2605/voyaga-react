@@ -1,6 +1,7 @@
 import React from 'react'
 import globe from '../video/globe.mp4'
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 
@@ -27,10 +28,16 @@ function SearchPlace() {
       setSearch(e.target.value);
   };
 
-  const getSearch = (e) => {
+  const getSearch = async (e) => {
     e.preventDefault();
     setQuery(search);
     setSearch('');
+
+    const API_KEY = "aaa7fc4fcffe44638d5bded15a9198c2";
+    const response = await axios.get(`https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=${API_KEY}`);
+    
+    console.log("boom works..");
+    console.log(response.data.features);
   };
 
   return (

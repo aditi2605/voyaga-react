@@ -28,15 +28,22 @@ function SearchPlacesResult() {
           url: `https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=${API_KEY}`,
           headers: { }
         };
+
+        const response = await axios.get(`https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=${API_KEY}`);
+
+        console.log(response.features);
         
-        axios(config)
-        .then(function (response) {
-            setAttraction(response.data);
-          console.log(response.data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+        // axios(config)
+        // .then(function (response) {
+        //   console.log("pre boom!")
+        //     setAttraction(response.data);
+        //     console.log("boom!")
+        //     console.log(response);
+        // })
+        // .catch(function (error) {
+        //   console.log("boom! error");
+        //   console.log(error);
+        // });
         
     };
     getRecipes();
@@ -60,15 +67,15 @@ function SearchPlacesResult() {
                 attraction && attraction?.map && attraction?.map((attraction, i)  => {
                         return (
                           <div className="displayRecipe" key={i}>
-                            <h5 className='displayRecipetitle'>{attraction.features.properties.name}</h5>
-                            <h3 className='displayRecipetitle'>{attraction.features.properties.country}</h3> 
+                            <h5 className='displayRecipetitle'>{attraction.type.features.properties.name}</h5>
+                            <h3 className='displayRecipetitle'>{attraction.type.features.properties.country}</h3> 
                             
                             <ul className='displayRecipeingredients'>
                               <li><b>Recipe Ingredients</b></li>
-                              <li>{attraction.features.properties.name}</li> 
-                              <li>{attraction.features.properties.address_line1}</li> 
-                              <li>{attraction.features.properties.address_line2}</li> 
-                              <li>{attraction.features.raw.amenity}</li> 
+                              <li>{attraction.type.features.properties.name}</li> 
+                              <li>{attraction.type.features.properties.address_line1}</li> 
+                              <li>{attraction.type.features.properties.address_line2}</li> 
+                              <li>{attraction.type.features.raw.amenity}</li> 
                             </ul>
                             <NavLink to={`/updaterecipe/${recipes._id}`}><button className='editbtn'>Edit</button></NavLink>
                             <button className='dltbtn' onClick={() => deleteRecipe(recipes._id)}>Delete</button> 
