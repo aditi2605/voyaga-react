@@ -20,7 +20,7 @@ function Home() {
         <>
             <section className="showcase">
                 <header>
-                    <h2 className="logo">Voyaga</h2>
+                    <h2 className="logo">Voyage</h2>
                     <div className={`toggle ${showNavbar && 'active'}`}  onClick={handleShowNavbar}>
                              
                             <div className={`nav-elements  ${showNavbar && 'active'}`}>
