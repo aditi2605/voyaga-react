@@ -3,7 +3,7 @@ A Website created from my hobby of travelling. This is my current running projec
  
 
  ### App Preview
-![](./frontend/src/images/Screenshot%20-page-1.png)
+![](./frontend/src/images/Screenshot-page-1.png)
 ![](./frontend/src/images/Screenshot%20-page-2.png)
 ![](./frontend/src/images/Screenshot%20-page-3.png)
 
