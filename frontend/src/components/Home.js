@@ -1,10 +1,27 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import video from '../video/northenlights.mp4'
-import { useState } from 'react'
+import { useState} from 'react'
+
+import PopularPlace from './PopularPlaces'
+import SearchPlace from './SearchPlace'
+import ShowAllPlaces from './ShowAllPlaces'
+import Slide from './Slide'
+import Footer from'./Footer'
+// import Result from './Result'
+
+import {RxHamburgerMenu} from 'react-icons/rx'
+
+
+
 
 
 function Home() {
+
+    // const homeRef = useRef(null);
+    // const popularRef = useRef(null);
+    // const searchRef = useRef(null);
+    // const resultRef = useRef(null);
 
     const [showNavbar, setShowNavbar] = useState(false);
 
@@ -12,6 +29,9 @@ function Home() {
       setShowNavbar(!showNavbar)
     }
 
+    // const scrollToSection = () => {
+    //   window.current?.scrollIntoView({ behavior: 'smooth' });
+    // }
 
 
     
@@ -19,24 +39,31 @@ function Home() {
   return (
         <>
             <section className="showcase">
+           
+
+
                 <header>
                     <h2 className="logo">Voyage</h2>
                     <div className={`toggle ${showNavbar && 'active'}`}  onClick={handleShowNavbar}>
+                             <RxHamburgerMenu />
                              
                             <div className={`nav-elements  ${showNavbar && 'active'}`}>
                                 <ul>
-                                    <li><NavLink to="/homepageindex.html">Home</NavLink></li>
-                                    <li><NavLink to="/searchindex.html">Services</NavLink></li>
-                                    <li><NavLink to="/popularplace">Popular Places</NavLink></li>
-                                    <li><NavLink to="/popularplacesindex.html">Book Now</NavLink></li>
-                                    <li><NavLink to="/contactus.html">Contact Us</NavLink></li>
+                                    <li> < Link to=""onClick={() => {
+                                         Home.current?.scrollIntoView({ behavior: 'smooth' });}}></Link>
+                                        Home
+                                    </li>
+                                    <li>< Link to=""onClick={() => {
+                                        PopularPlace.current?.scrollIntoView({ behavior: 'smooth' });}}></Link>PopularPlaces</li>
+                                    <li>Search Places</li>
+                                    <li>Contact Us</li>
                                 </ul>
                             </div>
-                    </div>    
+                        </div>
                 </header>
                 <video src={video} loop autoPlay={true} muted></video>
-                <div className="overlay"></div>
-                <div className="text">
+                <div className="overlay" > </div>
+                <div className="text" >
                     <h2>Never Stop </h2> 
                     <h3>Exploring The World</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -50,7 +77,14 @@ function Home() {
                     <li><Link to="https://twitter.com/?lang=en"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt='' /></Link></li>
                     <li><Link to="https://www.instagram.com/"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt=''/></Link></li>
                 </ul>
+               
             </section> 
+            {/* <PopularPlace /> */}
+            <section className='second-container'> <SearchPlace /> </section>
+            <section className='middle-container'> <ShowAllPlaces /> </section>
+            <section className='third-container'><Slide /></section>
+            <section className='third-container'><Footer /></section>
+            {/* <section className='third-container'> <Result /> </section> */}
                
         </>
   )

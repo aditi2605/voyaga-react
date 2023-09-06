@@ -1,0 +1,21 @@
+SR.NO,Country,City,Name of The Place,Type of the Place,Suggested Duration
+1,United Kingdom,London,Tower of London,Historic Sites,2-3 hours
+2,United Kingdom,London,The British Museum,History Museums,2-3 hours
+3,United Kingdom,London,London Eye,Tourist Attraction,1-2 hours
+4,United Kingdom,London,National Gallery,Art Museums,2-3 hours
+5,United Kingdom,London,Tower Bridge,Tourist Attraction,1-2 hours
+6,United Kingdom,London,Natural History Museum,History Museums,More than 3 hours
+7,United Kingdom,London,V&A - Victoria and Albert Museum,Art Museums,2-3 hours
+8,United Kingdom,London,Houses of Parliament,Historic Sites ,1-2 hours
+9,United Kingdom,London,Stonehenge,Ancient Ruins ,2-3 hours
+10,United Kingdom,London,Big Ben,Landmarks,1 hour
+11,United Kingdom,London,The View from The Shard,Tourist Attraction,1-2 hours
+12,United Kingdom,London,Cotswolds,Tourist Attraction,More than 3 hours
+13,United Kingdom,London,Madame Tussauds London,Tourist Attraction,1-2 hours
+14,United States,New York,Empire State Building,Architectural Buildings ,1-2 hours
+15,United States,New York,The National 9/11 Memorial & Museum,Historic Sites,2-3 hours
+16,United States,New York,The Metropolitan Museum of Art,Art Museums,2-3 hours
+17,United States,New York,Manhattan Helicopter Tour,Tourist Attraction,Less than 1
+18,United States,New York,Edge Observation Deck,Tourist Attraction,1-2 hours
+19,United States,New York,New York City Statue of Liberty,Tourist Attraction,1-2 hours
+20,United States,New York,Central Park,Scenic Walking Areas,More than 3 hours

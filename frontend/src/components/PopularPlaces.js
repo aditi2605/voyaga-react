@@ -20,11 +20,11 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper";
 
 
-function Popular() {
+function Popular(popularref) {
 
   return (
         <>
-         <div className='places'>
+            <section popularref={popularref} className='places'>
                 <Swiper
                     effect={"cards"}
                     grabCursor={true}
@@ -81,7 +81,7 @@ function Popular() {
                         <Link className='explorebtn' to="/popolarplaces">Explore</Link>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
   )
 }

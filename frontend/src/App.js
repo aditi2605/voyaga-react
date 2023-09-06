@@ -1,16 +1,16 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from './views/HomePage.js'
-import SearchPlace from './components/SearchPlace';
-// import PopularPlaces from './components/PopularPlaces'
+import MainPage from './views/MainPage.js';
+import ResultPage from './views/ResultPage';
+
 
 function App() {
   return (
     <div className="App">
        <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />}/>
-            <Route path="/searchplace" element={<SearchPlace />}/>
+            <Route path="/" element={<MainPage />}/>
+            <Route path="/result" element={<ResultPage />}/>
           </Routes>
        </BrowserRouter>
     </div>
